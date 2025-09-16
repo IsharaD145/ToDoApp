@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "ToDoApp.Controllers.AuthController",
+    "Method": "Authenticate",
+    "RelativePath": "Auth/login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ToDoApp.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
