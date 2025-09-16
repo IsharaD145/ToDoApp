@@ -33,3 +33,12 @@ C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\obj\Debug\net8.0\refint\ToDo
 C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\obj\Debug\net8.0\ToDoApp.pdb
 C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\obj\Debug\net8.0\ToDoApp.genruntimeconfig.cache
 C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\obj\Debug\net8.0\ref\ToDoApp.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Traning projects\ToDoApp\backend\ToDoApp\ToDoApp\obj\Debug\net8.0\ToDoApp.sourcelink.json
