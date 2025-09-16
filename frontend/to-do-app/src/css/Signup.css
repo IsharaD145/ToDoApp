@@ -1,0 +1,45 @@
+.signup-main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      background-color: #001828;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.signup-main h1{
+    padding: 0.1rem;
+    margin-top: 0.1rem;
+    margin-bottom: 1.7rem;
+}
+
+.signup-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgba(245, 245, 245, 0.204);
+  padding: 2rem;
+  max-width: 40rem;
+  width: 95%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.3);
+  transition: ease 0.4s;
+}
+
+@media screen and (max-width:426px) {
+    .signup-section{
+        max-width: 75vw;
+        padding: 1rem;
+    }
+
+    .login-form {
+        gap: 1rem;
+    }
+
+    button{
+          padding: 0.5rem;
+    }
+
+    
+}

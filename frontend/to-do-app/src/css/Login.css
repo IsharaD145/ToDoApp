@@ -5,6 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #001828;
+  color: rgba(255, 255, 255, 0.87);
 }
 .login-main h1{
     padding: 0.1rem;

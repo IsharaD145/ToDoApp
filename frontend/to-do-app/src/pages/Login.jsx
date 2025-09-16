@@ -1,6 +1,7 @@
 import LoginForm from "../components/LoginForm"
 import "../css/Login.css"
 import Logo from "../components/Logo"
+import { Link } from "react-router-dom"
 
 function Login() {
   return (
@@ -11,7 +12,7 @@ function Login() {
             </div>
             <h1>Login</h1>
             <LoginForm/>
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
         </section>
     </div>
   )
