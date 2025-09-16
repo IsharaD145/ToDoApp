@@ -1,0 +1,11 @@
+# Visual Studio
+.vs/
+*.vsidx
+
+# Node.js
+node_modules/
+build/
+dist/
+
+# Environment files
+.env
