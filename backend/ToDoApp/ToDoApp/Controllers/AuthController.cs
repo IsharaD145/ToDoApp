@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ToDoApp.Models;
+using ToDoApp.Services;
 
 namespace ToDoApp.Controllers
 {
@@ -11,5 +13,11 @@ namespace ToDoApp.Controllers
         {
             return Ok(new { message = "Came"});
         }
+
+        [HttpPost("signup")]
+        public IActionResult Signup([FromBody] User user) { 
+            UserServices.AddUser(user);
+        }
+
     }
 }

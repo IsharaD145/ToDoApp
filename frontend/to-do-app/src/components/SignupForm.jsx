@@ -10,10 +10,10 @@ function SignupForm() {
   const schema = yup.object().shape({
     firstName: yup.string().required('First name is required'),
     lastName: yup.string().required('Last name is required'),
-    username: yup.string().required('Username is required'),
+    username: yup.string().required('Username is required').matches(/^[a-zA-Z0-9_]+$/, 'Username can only contain letters, numbers, and underscores').min(5, 'Username must be at least 5 characters long'),
     email: yup.string().required('Email is required').email('Enter a valid email'),
-    
-    terms: yup.bool().oneOf([true], 'Terms must be accepted'),
+    password: yup.string().required('Password is required').min(8, 'Password must be at least 8 characters long'),
+    confirmPassword: yup.string().oneOf([yup.ref("password")],"Passwords must match").required("Re-Enter the password").min(8, 'Password must be at least 8 characters long'),  
   });
 
   return (
@@ -25,18 +25,20 @@ function SignupForm() {
         lastName: '',
         username: '',
         email: '',
-        
-        terms: false,
+        password:'',
+        confirmPassword:'',
       }}
     >
       {({ handleSubmit, handleChange, values, touched, errors }) => (
         <Form noValidate onSubmit={handleSubmit}>
-          <Row className="mb-3">
+          <Row className="mb-1">
             <Form.Group as={Col} md="4" className="d-flex flex-column mb-3">
               <Form.Label>First Name</Form.Label>
               <Form.Control
+              className="custom-input"
                 type="text"
                 name="firstName"
+                placeholder="First name"
                 value={values.firstName}
                 onChange={handleChange}
                 isInvalid={touched.firstName && !!errors.firstName}
@@ -48,8 +50,10 @@ function SignupForm() {
             <Form.Group as={Col} md="4" className="d-flex flex-column mb-3">
               <Form.Label>Last Name</Form.Label>
               <Form.Control
+              className="custom-input"
                 type="text"
                 name="lastName"
+                placeholder="Last name"
                 value={values.lastName}
                 onChange={handleChange}
                 isInvalid={touched.lastName && !!errors.lastName}
@@ -63,6 +67,7 @@ function SignupForm() {
               <InputGroup hasValidation>
                 <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                 <Form.Control
+                className="custom-input"
                   type="text"
                   placeholder="Username"
                   aria-describedby="inputGroupPrepend"
@@ -77,10 +82,11 @@ function SignupForm() {
             </Form.Group>
           </Row>
 
-          <Row className="mb-3">
+          <Row className="mb-1">
             <Form.Group as={Col} className="d-flex flex-column mb-3">
               <Form.Label>Email</Form.Label>
               <Form.Control
+              className="custom-input"
                 type="email"
                 name="email"
                 placeholder="john@gmail.com"
@@ -93,18 +99,40 @@ function SignupForm() {
             </Form.Group>
           </Row>
 
-          <Form.Group className="mb-3 d-flex flex-column">
-            <Form.Check
-              required
-              name="terms"
-              label="Agree to terms and conditions"
+          <Row className="mb-3">
+            <Form.Group as={Col} md="6" className="d-flex flex-column mb-3">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+              className="custom-input"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={values.password}
               onChange={handleChange}
-              isInvalid={touched.terms && !!errors.terms}
-              feedback={errors.terms}
-              feedbackType="invalid"
-              id="validationFormik0"
+              isInvalid={touched.password && !!errors.password}
+              isValid={touched.password && !errors.password}
             />
-          </Form.Group>
+            <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group as={Col} md="6" className="d-flex flex-column mb-3">
+              <Form.Label>Re-Enter Password</Form.Label>
+              <Form.Control
+              className="custom-input"
+              type="password"
+              name="confirmPassword"
+              placeholder="Re-Enter Password"
+              value={values.confirmPassword}
+              onChange={handleChange}
+              isInvalid={touched.confirmPassword && !!errors.confirmPassword}
+              isValid={touched.confirmPassword && !errors.confirmPassword}
+            />
+            <Form.Control.Feedback type="invalid">{errors.confirmPassword}</Form.Control.Feedback>
+            </Form.Group>
+          </Row>
+          
+
+          
 
           <Button type="submit">Submit</Button>
         </Form>
